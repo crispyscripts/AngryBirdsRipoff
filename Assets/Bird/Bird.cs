@@ -66,10 +66,15 @@ public class Bird : MonoBehaviour
 
         if (_timeSittingAround >= _waitForReset) return true;
 
-        if (GetComponent<Rigidbody2D>().velocity.magnitude <= 0.1)
+        foreach (var bodies in GetComponents<Rigidbody2D>())
         {
-            _timeSittingAround += Time.deltaTime;
+            if (bodies.velocity.magnitude > 0.1)
+            {
+                return false;
+            }
         }
+
+        _timeSittingAround += Time.deltaTime;
 
         if (transform.position.x < -25 || transform.position.x > 25 || transform.position.y < -15 || transform.position.y > 15) return true;
 
