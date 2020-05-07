@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject _cloudParticlePrefab;
+    [SerializeField] GameObject _cloudParticlePrefab = null;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,5 +32,6 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(_cloudParticlePrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        LevelController._score++;
     }
 }
