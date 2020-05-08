@@ -63,10 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Bird\Bird.cs" />
-    <Compile Include="Assets\Level.cs" />
     <Compile Include="Assets\LevelController.cs" />
+    <Compile Include="Assets\LevelTextUpdater.cs" />
     <Compile Include="Assets\Monster\Enemy.cs" />
-    <Compile Include="Assets\Score.cs" />
+    <Compile Include="Assets\ScoreTextUpdater.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

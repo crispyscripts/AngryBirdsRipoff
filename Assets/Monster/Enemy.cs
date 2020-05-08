@@ -32,6 +32,6 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(_cloudParticlePrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
-        LevelController._score++;
+        ScoreTextUpdater.score++;
     }
 }

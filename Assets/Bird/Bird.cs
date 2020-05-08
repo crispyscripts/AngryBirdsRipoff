@@ -76,7 +76,7 @@ public class Bird : MonoBehaviour
 
         _timeSittingAround += Time.deltaTime;
 
-        if (transform.position.x < -25 || transform.position.x > 25 || transform.position.y < -15 || transform.position.y > 15) return true;
+        if (transform.position.x < -50 || transform.position.x > 50 || transform.position.y < -15 || transform.position.y > 50) return true;
 
         return false;
     }
@@ -85,5 +85,6 @@ public class Bird : MonoBehaviour
     {
         var currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
+        LevelController.ResetScore();
     }
 }
